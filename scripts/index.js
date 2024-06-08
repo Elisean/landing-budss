@@ -28,18 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  const inputName = document.getElementById('userName');
-
-  inputName.addEventListener('input', () =>{
-    const currentValue = inputName.value;
-    if(currentValue === ''){
-      console.log(false)
-    }
-  });
-
-
-
-
 })
 
 
