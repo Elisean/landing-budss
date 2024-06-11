@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.11/build/css/intlTelInput.css">
     <link rel="stylesheet" href="styles/style.css">
     <title>Landing</title>
 </head>
@@ -376,19 +377,22 @@
                 </button>
                 <div class="section-form__inputs form-inputs">
 
-                    <label for="userName" class="form-inputs__label input-requared">
+                    <label for="userName" class="form-inputs__label ">
                         Name <span class="red-star">*</span> 
-                        <input type="text" id="userName" placeholder="Enter name" class="form-inputs__input">
+                        <input type="text" id="userName" placeholder="Enter name" class="form-inputs__input input-requaired">
+                        <p class="error">This field is required.</p>
                     </label>
 
-                    <label for="userEmail" class="form-inputs__label input-requared">
+                    <label for="userEmail" class="form-inputs__label">
                         Email <span class="red-star">*</span> 
-                        <input type="email" id="userEmail" placeholder="Enter email" class="form-inputs__input">
+                        <input type="email" id="userEmail" placeholder="Enter email" class="form-inputs__input input-requaired">
+                        <p class="error">This field is required.</p>
                     </label>
 
-                    <label for="userPhone" class="form-inputs__label input-requared">
+                    <label for="userPhone" class="form-inputs__label">
                         Phone number <span class="red-star">*</span> 
-                        <input type="tel" id="userPhone" placeholder="+ 1 900 000 00 00" class="form-inputs__input">
+                        <input type="tel" id="phone"  class="form-inputs__input input-requaired">
+                        <p class="error">This field is required.</p>
                     </label>
 
                     <label for="userCompany" class="form-inputs__label">
@@ -401,6 +405,7 @@
                         <input type="text" id="userWebsite" placeholder="Enter Website/Store URL" class="form-inputs__input">
                     </label>
                 </div>
+                <p class="error main-error">Please fill in all required fields</p>
                 <p class="section-form__warning">
                     By submitting this form you are agreeing to Budss’s <a href="#">Privacy Policy</a> and <a href="#">Terms of Use</a>
                 </p>
@@ -513,6 +518,7 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.11/build/js/intlTelInput.min.js"></script>
     <script src="./scripts/index.js"></script>
 </body>
 </html>

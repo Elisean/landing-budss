@@ -5,6 +5,7 @@
     --purple: #954CED;
     --black:#000000;
     --aqua:#2FDBBC;
+    --error:#EC1211;
 }
 a{
     text-decoration: none;  
@@ -20,7 +21,9 @@ body {
     color: var(--main-text);
     overflow-x: hidden;
 }
-  
+body.overflow{
+    overflow: hidden;
+}
 .container{
     max-width: 1342px;
     padding: 0 15px;
@@ -379,7 +382,7 @@ body {
     width: 417px;
     opacity: 1;
     visibility: visible;
-    z-index: 2;
+    z-index: 5;
 }
 .section-form__closed {
     display: block;
@@ -429,11 +432,78 @@ body {
     background-color: #B9B9B9;
     font-size: 20px;
     font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
 }
-#userPhone{
-    padding: 3px 0 3px 40px;
-    width: 280px;
+.section-form__submit:hover{
+    background-color: var(--purple);
 }
+.iti__dropdown-content{
+    width: 300px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-55%, -10%);
+}
+.iti__country-name{
+    color: var(--black);
+}
+.error{
+    display: none;
+    color: var(--error);
+    font-size: 12px;
+}
+.main-error{
+    display: none;
+    font-size: 16px;
+    color: var(--error);
+    margin: 0 0 0 45px;
+}
+.cookies-banner{
+    background-color: var(--main-text);
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    justify-content: space-between;
+    position: fixed;
+    width: 1300px;
+    left: 50%;
+    bottom: 2%;
+    transform: translate(-53%,-50%);
+    z-index: 5;
+    border-radius: 16px;
+}
+.cookies-banner.closed{
+    display: none;
+}
+.cookies-banner__text{
+    font-size: 20px;
+    font-weight: 300;
+    color: #383838;
+}
+.cookies-banner__buttons{
+    display: flex;
+}
+.cookies-banner__button{
+    border:1px solid var(--purple);
+    width: 128px;
+    border-radius: 16px;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 40px 0 0;
+    cursor: pointer;
+}
+.cookies-banner__closed{
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
 
 
 /* animation */

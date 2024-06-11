@@ -15,6 +15,17 @@
     .inner__about-us__item{
         margin: 0 0 0 25px;
     }
+
+    .cookies-banner{
+        width: 1100px;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .cookies-banner br{
+        display: none;
+    }
+
+
 }
 @media (max-width:1200px) {
     .container{
@@ -76,6 +87,12 @@
     }
     .footer-top__for-link{
         font-size: 18px;
+    }
+    .cookies-banner{
+        width: 900px;
+    }
+    .cookies-banner__button{
+        margin: 0 10px 0 0;
     }
 }
 @media (max-width:993px) {
@@ -208,6 +225,14 @@
         position: absolute;
         left: 0;
     }
+    .cookies-banner{
+        width: 700px;
+    }
+    .cookies-banner__text{
+        font-size: 17px;
+        margin: 0 10px 0 0;
+    }
+  
 }
 @media (max-width:768px) {
     .container{
@@ -312,6 +337,17 @@
     }
     .section-logos__item img{
         width: 100px;
+    }
+    .cookies-banner{
+        width: 500px;
+        padding: 20px;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .cookies-banner__button{
+        height: 60px;
+        margin: 10px ;
     }
 }
 @media (max-width:567px) {
@@ -524,6 +560,13 @@
     .footer-bottom__item:first-child{
         position: static;
     }
+    .cookies-banner{
+        width: 320px;
+        justify-content: flex-start;
+    }
+    .cookies-banner__button{
+        margin: 10px 10px 0 0;
+    }
 
 }
 @media (max-width:375px) {
@@ -584,5 +627,8 @@
     }
     .section-logos__item:first-child{
         width: 200px;
+    }
+    .cookies-banner{
+        width: 260px;
     }
 }
