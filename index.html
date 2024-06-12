@@ -377,21 +377,21 @@
                 </button>
                 <div class="section-form__inputs form-inputs">
 
-                    <label for="userName" class="form-inputs__label ">
+                    <label for="userName" class="form-inputs__label">
                         Name <span class="red-star">*</span> 
-                        <input type="text" id="userName" placeholder="Enter name" class="form-inputs__input input-requaired">
+                        <input type="text" id="userName" name="name" placeholder="Enter name" class="form-inputs__input">
                         <p class="error">This field is required.</p>
                     </label>
 
                     <label for="userEmail" class="form-inputs__label">
                         Email <span class="red-star">*</span> 
-                        <input type="email" id="userEmail" placeholder="Enter email" class="form-inputs__input input-requaired">
+                        <input type="email" id="userEmail" name="email" placeholder="Enter email" class="form-inputs__input">
                         <p class="error">This field is required.</p>
                     </label>
 
                     <label for="userPhone" class="form-inputs__label">
                         Phone number <span class="red-star">*</span> 
-                        <input type="tel" id="phone"  class="form-inputs__input input-requaired">
+                        <input type="tel" id="phone" name="phone" class="form-inputs__input">
                         <p class="error">This field is required.</p>
                     </label>
 
@@ -412,6 +412,15 @@
                 <button class="section-form__submit" type="submit">Contact sales</button>
             </form>
         </section>
+        <div class="section-form__success success-form">
+            <button class="success-form__closed" type="button">
+                <img src="./icons/close-black.svg" alt="close-black" >
+            </button>
+            <img src="./icons/purple-smile-success.svg" alt="purple-smile">
+            <h3 class="success-form__title">Thank you!</h3>
+            <p class="success-form__subtitle">Thank you, we have received your application and will contact you soon!</p>
+            <button class="success-form__button main-button">Super!</button>
+        </div>
     </main>
     <footer class="footer">
         <div class="container">

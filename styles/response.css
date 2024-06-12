@@ -567,6 +567,9 @@
     .cookies-banner__button{
         margin: 10px 10px 0 0;
     }
+    .section-form__success{
+        width: 330px !important;
+    }
 
 }
 @media (max-width:375px) {
@@ -630,5 +633,11 @@
     }
     .cookies-banner{
         width: 260px;
+    }
+    .section-form__success{
+        width: 300px !important;
+    }
+    .success-form__button{
+        width: 290px;
     }
 }

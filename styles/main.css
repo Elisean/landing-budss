@@ -503,8 +503,42 @@ body.overflow{
     top: 10px;
     cursor: pointer;
 }
-
-
+.section-form__success{
+    display: none;
+}
+.section-form__success.open{
+    display: block;
+    background-color: var(--main-text);
+    color: var(--black);
+    position: fixed;
+    width: 357px;
+    padding: 20px 20px 40px 20px;
+    border-radius: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.success-form__button{
+    width: 337px;
+    margin: 15px 0 0 0;
+}
+.success-form__closed{
+    display: block;
+    border: none;
+    background-color: transparent;
+    margin: 0 19px 0 auto;
+    cursor: pointer;
+}
+.success-form__title{
+    color: var(--purple);
+    font-size: 36px;
+    font-weight: 600;
+}
+.success-form__subtitle{
+    font-size: 24px;
+    color: #444444;
+}
 
 /* animation */
 

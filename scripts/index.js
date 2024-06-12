@@ -12,10 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const formWrapper = document.querySelector('.section-form');
   const buttonClosed = document.querySelector('.section-form__closed');
   const form = document.querySelector('.section-form__form');
-  const requiredElements = document.querySelectorAll('.input-requaired');
   const mainError = document.querySelector('.main-error');
+  const successModal = document.querySelector('.section-form__success');
+  const successModalClosed = document.querySelector('.success-form__closed');
+  const successModalButton = document.querySelector('.success-form__button');
 
-
+  
   buttons.forEach(button => {
     button.addEventListener('click', () => {
       formWrapper.classList.add('open');
@@ -33,15 +35,43 @@ document.addEventListener('DOMContentLoaded', () => {
  
   form.addEventListener('submit', (event)=>{
     event.preventDefault();
-    
-    requiredElements.forEach((element)=>{
 
-      if(element.value === ''){
-        element.parentElement.childNodes[5].style.display = 'block'
-        mainError.style.display = 'block'
-      }
-   
-    })
+        if(form.name.value === ''){
+          form.name.parentElement.childNodes[5].style.display = 'block'
+          mainError.style.display = 'block'
+        }else{
+          form.name.parentElement.childNodes[5].style.display = 'none'
+          mainError.style.display = 'none'
+        }
+        if(form.email.value === ''){
+          form.email.parentElement.childNodes[5].style.display = 'block'
+          mainError.style.display = 'block'
+        }else{
+           form.email.parentElement.childNodes[5].style.display = 'none'
+          mainError.style.display = 'none'
+        }
+        if(form.phone.value === ''){
+          form.phone.parentElement.parentElement.childNodes[5].style.display = 'block'
+          mainError.style.display = 'block'
+        }else{
+          form.phone.parentElement.parentElement.childNodes[5].style.display = 'none'
+          mainError.style.display = 'none'
+        }
+        if(mainError.style.display === 'none'){
+          formWrapper.classList.remove('open');
+          body.classList.remove('overflow')
+          setTimeout(()=>{
+            successModal.classList.add('open')
+          }, 1000)
+        }
+  })
+
+  successModalClosed.addEventListener('click', ()=>{
+    successModal.classList.remove('open')
+  })
+  successModalButton.addEventListener('click', ()=>{
+    successModal.classList.remove('open')
+    window.location.reload()
   })
 
   const input = document.querySelector("#phone");
